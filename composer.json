@@ -1,0 +1,56 @@
+{
+    "name": "moharram82/package-name",
+    "description": "Package description.",
+    "keywords": [
+        "moharram82",
+        "package-name"
+    ],
+    "homepage": "https://github.com/moharram82/package-name",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "laravel/framework": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moharram82\\PackageName\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Moharram82\\PackageName\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moharram82\\PackageName\\PackageNameServiceProvider"
+            ],
+            "aliases": {
+                "PackageName": "Moharram82\\PackageName\\PackageNameFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
